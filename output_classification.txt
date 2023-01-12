@@ -1,0 +1,102 @@
+Model: "functional_73"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_22 (InputLayer)        [(None, 28, 28, 1)]       0         
+_________________________________________________________________
+conv2d_299 (Conv2D)          (None, 28, 28, 32)        320       
+_________________________________________________________________
+batch_normalization_267 (Bat (None, 28, 28, 32)        128       
+_________________________________________________________________
+conv2d_300 (Conv2D)          (None, 28, 28, 32)        9248      
+_________________________________________________________________
+batch_normalization_268 (Bat (None, 28, 28, 32)        128       
+_________________________________________________________________
+max_pooling2d_40 (MaxPooling (None, 14, 14, 32)        0         
+_________________________________________________________________
+conv2d_301 (Conv2D)          (None, 14, 14, 64)        18496     
+_________________________________________________________________
+batch_normalization_269 (Bat (None, 14, 14, 64)        256       
+_________________________________________________________________
+conv2d_302 (Conv2D)          (None, 14, 14, 64)        36928     
+_________________________________________________________________
+batch_normalization_270 (Bat (None, 14, 14, 64)        256       
+_________________________________________________________________
+max_pooling2d_41 (MaxPooling (None, 7, 7, 64)          0         
+_________________________________________________________________
+conv2d_303 (Conv2D)          (None, 7, 7, 128)         73856     
+_________________________________________________________________
+batch_normalization_271 (Bat (None, 7, 7, 128)         512       
+_________________________________________________________________
+conv2d_304 (Conv2D)          (None, 7, 7, 128)         147584    
+_________________________________________________________________
+batch_normalization_272 (Bat (None, 7, 7, 128)         512       
+_________________________________________________________________
+conv2d_305 (Conv2D)          (None, 7, 7, 256)         295168    
+_________________________________________________________________
+batch_normalization_273 (Bat (None, 7, 7, 256)         1024      
+_________________________________________________________________
+conv2d_306 (Conv2D)          (None, 7, 7, 256)         590080    
+_________________________________________________________________
+batch_normalization_274 (Bat (None, 7, 7, 256)         1024      
+_________________________________________________________________
+flatten_15 (Flatten)         (None, 12544)             0         
+_________________________________________________________________
+dense_30 (Dense)             (None, 128)               1605760   
+_________________________________________________________________
+dense_31 (Dense)             (None, 10)                1290      
+=================================================================
+Total params: 2,782,570
+Trainable params: 2,780,650
+Non-trainable params: 1,920
+
+
+
+Epoch 1/100
+  2/469 [..............................] - ETA: 55s - loss: 3.6643 - categorical_accuracy: 0.2773 - recall_6: 0.1797 - precision_11: 0.3262WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0771s vs `on_train_batch_end` time: 0.1587s). Check your callbacks.
+469/469 [==============================] - 29s 62ms/step - loss: 0.1355 - categorical_accuracy: 0.9653 - recall_6: 0.9632 - precision_11: 0.9698 - val_loss: 0.0786 - val_categorical_accuracy: 0.9799 - val_recall_6: 0.9793 - val_precision_11: 0.9813
+Epoch 2/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0441 - categorical_accuracy: 0.9873 - recall_6: 0.9867 - precision_11: 0.9882 - val_loss: 0.0413 - val_categorical_accuracy: 0.9887 - val_recall_6: 0.9884 - val_precision_11: 0.9894
+Epoch 3/100
+469/469 [==============================] - 28s 61ms/step - loss: 0.0286 - categorical_accuracy: 0.9918 - recall_6: 0.9913 - precision_11: 0.9923 - val_loss: 0.0484 - val_categorical_accuracy: 0.9879 - val_recall_6: 0.9873 - val_precision_11: 0.9887
+Epoch 4/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0290 - categorical_accuracy: 0.9915 - recall_6: 0.9911 - precision_11: 0.9919 - val_loss: 0.0405 - val_categorical_accuracy: 0.9902 - val_recall_6: 0.9900 - val_precision_11: 0.9908
+Epoch 5/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0236 - categorical_accuracy: 0.9932 - recall_6: 0.9930 - precision_11: 0.9936 - val_loss: 0.0297 - val_categorical_accuracy: 0.9922 - val_recall_6: 0.9915 - val_precision_11: 0.9928
+Epoch 6/100
+469/469 [==============================] - 28s 61ms/step - loss: 0.0167 - categorical_accuracy: 0.9948 - recall_6: 0.9945 - precision_11: 0.9951 - val_loss: 0.0333 - val_categorical_accuracy: 0.9915 - val_recall_6: 0.9912 - val_precision_11: 0.9920
+Epoch 7/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0193 - categorical_accuracy: 0.9945 - recall_6: 0.9942 - precision_11: 0.9947 - val_loss: 0.0256 - val_categorical_accuracy: 0.9930 - val_recall_6: 0.9924 - val_precision_11: 0.9936
+Epoch 8/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0127 - categorical_accuracy: 0.9962 - recall_6: 0.9961 - precision_11: 0.9964 - val_loss: 0.0697 - val_categorical_accuracy: 0.9840 - val_recall_6: 0.9830 - val_precision_11: 0.9848
+Epoch 9/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0147 - categorical_accuracy: 0.9954 - recall_6: 0.9953 - precision_11: 0.9956 - val_loss: 0.0416 - val_categorical_accuracy: 0.9916 - val_recall_6: 0.9914 - val_precision_11: 0.9920
+Epoch 10/100
+469/469 [==============================] - 28s 61ms/step - loss: 0.0162 - categorical_accuracy: 0.9955 - recall_6: 0.9952 - precision_11: 0.9957 - val_loss: 0.0276 - val_categorical_accuracy: 0.9924 - val_recall_6: 0.9922 - val_precision_11: 0.9927
+Epoch 11/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0143 - categorical_accuracy: 0.9954 - recall_6: 0.9953 - precision_11: 0.9956 - val_loss: 0.0246 - val_categorical_accuracy: 0.9931 - val_recall_6: 0.9926 - val_precision_11: 0.9937
+Epoch 12/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0079 - categorical_accuracy: 0.9978 - recall_6: 0.9977 - precision_11: 0.9979 - val_loss: 0.0296 - val_categorical_accuracy: 0.9921 - val_recall_6: 0.9920 - val_precision_11: 0.9925
+Epoch 13/100
+469/469 [==============================] - 28s 61ms/step - loss: 0.0073 - categorical_accuracy: 0.9978 - recall_6: 0.9977 - precision_11: 0.9979 - val_loss: 0.0265 - val_categorical_accuracy: 0.9927 - val_recall_6: 0.9927 - val_precision_11: 0.9931
+Epoch 14/100
+469/469 [==============================] - 29s 61ms/step - loss: 0.0134 - categorical_accuracy: 0.9962 - recall_6: 0.9960 - precision_11: 0.9963 - val_loss: 0.0379 - val_categorical_accuracy: 0.9918 - val_recall_6: 0.9915 - val_precision_11: 0.9920
+Epoch 15/100
+469/469 [==============================] - 28s 61ms/step - loss: 0.0090 - categorical_accuracy: 0.9973 - recall_6: 0.9971 - precision_11: 0.9973 - val_loss: 0.0370 - val_categorical_accuracy: 0.9928 - val_recall_6: 0.9928 - val_precision_11: 0.9932
+
+
+Epoch 1/100
+  2/469 [..............................] - ETA: 43s - loss: 0.0014 - categorical_accuracy: 1.0000 - recall_7: 1.0000 - precision_12: 1.0000WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0272s vs `on_train_batch_end` time: 0.1595s). Check your callbacks.
+469/469 [==============================] - 13s 28ms/step - loss: 0.0079 - categorical_accuracy: 0.9980 - recall_7: 0.9980 - precision_12: 0.9980 - val_loss: 0.0272 - val_categorical_accuracy: 0.9946 - val_recall_7: 0.9946 - val_precision_12: 0.9948
+Epoch 2/100
+469/469 [==============================] - 12s 26ms/step - loss: 0.0031 - categorical_accuracy: 0.9991 - recall_7: 0.9991 - precision_12: 0.9992 - val_loss: 0.0270 - val_categorical_accuracy: 0.9946 - val_recall_7: 0.9945 - val_precision_12: 0.9947
+Epoch 3/100
+469/469 [==============================] - 13s 27ms/step - loss: 0.0016 - categorical_accuracy: 0.9995 - recall_7: 0.9995 - precision_12: 0.9995 - val_loss: 0.0258 - val_categorical_accuracy: 0.9951 - val_recall_7: 0.9950 - val_precision_12: 0.9952
+Epoch 4/100
+469/469 [==============================] - 13s 27ms/step - loss: 9.3156e-04 - categorical_accuracy: 0.9998 - recall_7: 0.9998 - precision_12: 0.9998 - val_loss: 0.0253 - val_categorical_accuracy: 0.9951 - val_recall_7: 0.9950 - val_precision_12: 0.9952
+Epoch 5/100
+469/469 [==============================] - 12s 27ms/step - loss: 6.3514e-04 - categorical_accuracy: 0.9999 - recall_7: 0.9999 - precision_12: 0.9999 - val_loss: 0.0251 - val_categorical_accuracy: 0.9949 - val_recall_7: 0.9949 - val_precision_12: 0.9950
+Epoch 6/100
+469/469 [==============================] - 12s 26ms/step - loss: 4.8664e-04 - categorical_accuracy: 0.9999 - recall_7: 0.9999 - precision_12: 0.9999 - val_loss: 0.0253 - val_categorical_accuracy: 0.9951 - val_recall_7: 0.9951 - val_precision_12: 0.9951
+Epoch 7/100
+469/469 [==============================] - 12s 26ms/step - loss: 3.9338e-04 - categorical_accuracy: 1.0000 - recall_7: 1.0000 - precision_12: 1.0000 - val_loss: 0.0257 - val_categorical_accuracy: 0.9952 - val_recall_7: 0.9952 - val_precision_12: 0.9952
